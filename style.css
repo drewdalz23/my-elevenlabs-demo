@@ -1,13 +1,18 @@
-/* === GLOBAL BACKGROUND === */
+/* FORCE BEAUTIFUL GRADIENT BACKGROUND */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
     background: linear-gradient(135deg, #e0f2fe 0%, #c7d2fe 50%, #e0e7ff 100%);
     min-height: 100vh;
     color: #1e293b;
 }
 
-/* === HEADER === */
+/* Header */
 header {
     background: #0f172a;
     color: white;
@@ -32,11 +37,10 @@ nav a {
     font-size: 0.85rem;
     font-weight: bold;
     min-width: 24px;
-    display: inline-block;
     margin-left: 8px;
 }
 
-/* === MAIN CONTENT === */
+/* Main content */
 main {
     max-width: 1300px;
     margin: 40px auto;
@@ -50,7 +54,7 @@ h2 {
     color: #1e293b;
 }
 
-/* === PRODUCT GRID === */
+/* Product grid */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -66,6 +70,7 @@ h2 {
     max-width: 380px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     transition: all 0.4s ease;
+    text-align: center;
 }
 
 .product:hover {
@@ -84,26 +89,9 @@ h2 {
     transform: scale(1.08);
 }
 
-.product h3 {
-    margin: 20px 0 10px;
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.product p {
-    color: #64748b;
-    margin: 0 20px 15px;
-    text-align: center;
-    font-size: 0.98rem;
-}
-
-.product .price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ec4899;
-    text-align: center;
-    margin: 10px 0;
-}
+.product h3 { margin: 20px 0 10px; font-size: 1.4rem; }
+.product p { color: #64748b; margin: 0 20px 15px; font-size: 0.98rem; }
+.product .price { font-size: 1.8rem; font-weight: bold; color: #ec4899; margin: 10px 0; }
 
 .product button {
     display: block;
