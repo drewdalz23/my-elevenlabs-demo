@@ -1,131 +1,126 @@
-body { 
-    font-family: 'Segoe UI', Arial, sans-serif; 
+/* === GLOBAL BACKGROUND === */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
-    color: #333;
+    background: linear-gradient(135deg, #e0f2fe 0%, #c7d2fe 50%, #e0e7ff 100%);
     min-height: 100vh;
+    color: #1e293b;
 }
 
+/* === HEADER === */
 header {
-    background: #1a1a1a;
+    background: #0f172a;
     color: white;
-    padding: 1rem;
+    padding: 1.2rem;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
-h1 { margin: 0; }
-
-/* === HERO BANNER === */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1600');
-    background-size: cover;
-    background-position: center;
-    height: 65vh;
-    min-height: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+#cart-count {
+    background: #ec4899;
     color: white;
-    margin-bottom: 40px;
+    border-radius: 50%;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    min-width: 24px;
+    display: inline-block;
+    margin-left: 8px;
 }
-.hero h1 { font-size: 4.5rem; margin: 0; }
-.hero p { font-size: 1.6rem; margin: 20px 0; }
-.hero-btn {
-    background: #00c853;
-    color: white;
-    border: none;
-    padding: 16px 48px;
-    font-size: 1.3rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.hero-btn:hover { background: #00a843; transform: scale(1.05); }
 
-/* === MAIN LAYOUT === */
+/* === MAIN CONTENT === */
 main {
-    max-width: 1200px;
-    margin: 0 auto 60px;
+    max-width: 1300px;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-h2 { text-align: center; margin-bottom: 40px; color: #1a1a1a; font-size: 2.2rem; }
+h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    color: #1e293b;
+}
 
-/* === PRODUCT GRID & CARDS === */
+/* === PRODUCT GRID === */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
 }
 
 .product {
     background: white;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: all 0.35s ease;
-    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
 }
 
 .product:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
 }
 
 .product img {
     width: 100%;
-    height: 220px;
+    height: 240px;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s;
 }
 
 .product:hover img {
     transform: scale(1.08);
 }
 
-.product h3 { margin: 18px 0 8px; font-size: 1.35rem; }
-.product p { color: #666; margin: 0 15px 15px; font-size: 0.95rem; }
-.product .price { 
-    font-size: 1.6rem; 
-    font-weight: bold; 
-    color: #e91e63; 
+.product h3 {
+    margin: 20px 0 10px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.product p {
+    color: #64748b;
+    margin: 0 20px 15px;
+    text-align: center;
+    font-size: 0.98rem;
+}
+
+.product .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ec4899;
+    text-align: center;
     margin: 10px 0;
 }
+
 .product button {
-    background: #0066ff;
+    display: block;
+    width: 80%;
+    margin: 0 auto 25px;
+    background: #3b82f6;
     color: white;
     border: none;
-    padding: 14px 28px;
-    margin-bottom: 20px;
+    padding: 14px;
     border-radius: 12px;
-    cursor: pointer;
     font-size: 1.1rem;
     font-weight: 600;
+    cursor: pointer;
     transition: 0.3s;
 }
-.product button:hover { background: #0052cc; transform: scale(1.05); }
 
-/* === CART BADGE === */
-#cart-count {
-    background: #e91e63;
-    color: white;
-    border-radius: 50%;
-    padding: 4px 9px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    min-width: 24px;
-    display: inline-block;
-    margin-left: 6px;
-    vertical-align: middle;
+.product button:hover {
+    background: #2563eb;
+    transform: scale(1.05);
 }
