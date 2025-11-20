@@ -14,11 +14,16 @@
         </nav>
     </header>
 
-    <main>
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="total">0</span></p>
-        <button onclick="checkout()">Checkout</button>
-    </main>
+<main style="max-width: 800px; margin: 40px auto; padding: 20px;">
+    <h2 style="text-align:center;">Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 style="text-align:right; margin-top:20px;">Total: $<span id="total">0</span></h3>
+    <p style="text-align:center; margin-top:30px;">
+        <button onclick="checkout()" style="padding:15px 40px; font-size:1.2rem; background:#00c853; border:none; color:white; border-radius:8px; cursor:pointer;">
+            Checkout Now
+        </button>
+    </p>
+</div>
 
     <footer>
         <p>&copy; 2025 TechStore. Need help? Ask our voice assistant about your order!</p>
@@ -53,8 +58,8 @@
         }
     </script>
 
-    <!-- ElevenLabs Widget Embed (Same as homepage) -->
-    <elevenlabs-convai agent-id="<elevenlabs-convai agent-id="agent_7501kafasqcgfs2sqtefvq3dv89g"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>"></elevenlabs-convai>
+<!-- ElevenLabs Widget Embed -->
+    <elevenlabs-convai agent-id="agent_7501kafasqcgfs2sqtefvq3dv89g"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
